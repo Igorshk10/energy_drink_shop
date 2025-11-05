@@ -23,7 +23,7 @@ let data = [
         price: 72,
         currency: 'UAH',
         rating: 4.9,
-        url_img: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.redbull.com%2Fua-uk%2Fenergydrink%2Fproducts%2Fred-bull-yellow-edition&psig=AOvVaw0P2IRV_pRUnFryEoyhCFc_&ust=1762425180060000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCMiT4Mjn2pADFQAAAAAdAAAAABAE',
+        url_img: 'https://bevmo.com/cdn/shop/files/9635c720-7f6a-47df-8de0-c2f532f6a894-background_removed.png?v=1747101807&width=990',
         brand: 'Red Bull'
     },
     {
