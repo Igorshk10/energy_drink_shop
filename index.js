@@ -1,4 +1,5 @@
-let main = document.querySelector('.main');
+const main = document.querySelector('.main');
+
 
 data.forEach( (e) => {
     main.innerHTML += ` <div class="card">
@@ -14,3 +15,14 @@ data.forEach( (e) => {
         </div>
 `
 })
+
+const buttons = document.querySelectorAll('.buy-btn');
+
+
+buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        alertify.success('Товар додано до кошика');
+        btn.innerHTML = `<i class='bx bx-check'></i>`
+        btn.classList.add("clicked");
+    });
+});

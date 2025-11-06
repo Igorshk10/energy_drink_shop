@@ -7,20 +7,27 @@
 }
 
 .card{
-    width: 220px;
+    width: 240px;
     height: 350px;
     border: 1px solid #ccc;
     border-radius: 10px;
-    margin-right: 20px;
+    margin-right: 40px;
+    margin-bottom: 40px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    transition: all 0.3s;
 }
 
+.card:hover{
+    box-shadow: 0 0 12px rgba(0,0,0,0.3);
+    transform: scale(1.05);
+    transition: all 0.3s;
+}
 .top{
     width: 100%;
-    height: 60%;
+    height: 55%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,4 +37,62 @@
 
 .top img{
     height: 90%;
+}
+
+.bottom{
+    box-sizing: border-box;
+    width: 100%;
+    height: 45%;
+    padding: 12px;
+    font-family: "Gill Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    justify-content: space-between;
+}
+
+.bottom p{
+    padding: 0px;
+    margin: 0;
+    margin-bottom: 4px;
+}
+
+
+.price{
+    font-weight: 900;
+}
+
+.buy-btn{
+    width: 25%;
+    background-color: rgb(5, 183, 5);
+    font-weight: 700;
+    font-size: 20px;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    padding: 10px 0px;
+    align-self: flex-end;
+    transition: all 0.3s ;
+}
+
+.buy-btn.clicked{
+    background-color: rgb(208, 248, 208);
+    color: rgb(5, 183, 5);
+    pointer-events: none;
+}
+
+.buy-btn:hover{
+    cursor: pointer;
+    background-color: rgb(236, 141, 0);
+    transition: all 0.3s ;
+}
+
+
+.ajs-message.ajs-success.ajs-visible{
+    background: #25e68c;
+    background: linear-gradient(90deg, rgba(37, 230, 140, 1) 31%, rgba(93, 232, 209, 1) 97%);
+    font-size: 16px;
+    font-weight: 600;
+    font-family:  "Gill Sans", sans-serif;
+    text-shadow: none;
 }
