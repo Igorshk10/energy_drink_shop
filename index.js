@@ -1,5 +1,7 @@
 const main = document.querySelector('.main');
 
+let data2 = []
+
 
 data.forEach( (e) => {
     main.innerHTML += ` <div class="card">
@@ -21,7 +23,7 @@ const buttons = document.querySelectorAll('.buy-btn');
 
 buttons.forEach(btn => {
     btn.addEventListener('click', () => {
-        alertify.success('Товар додано до кошика');
+        alertify.success('Added to cart successfully!');
         btn.innerHTML = `<i class='bx bx-check'></i>`
         btn.classList.add("clicked");
     });

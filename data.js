@@ -3,9 +3,9 @@ let data = [
     // Red Bull Energy Drinks
     
     {
-        name: 'Оригінальний Red Bull',
+        name: 'Red Bull Classic',
         price: 69,
-        raiting: 4.8,
+        rating: 4.8,
         currency: 'UAH',
         url_img: 'https://www.redbull.com/energydrink/v1/resources/storyblok/images/f/287059/528x1348/159a46d829/ua_ed_250ml_energy-drink_country_rgb__cold_closed_front_com_full.png/m/616x0',
         brand: 'Red Bull'
