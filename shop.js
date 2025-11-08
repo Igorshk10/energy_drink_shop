@@ -1,6 +1,27 @@
 const main = document.querySelector('.main');
 
-let data2 = []
+let add = document.querySelector('.add')
+
+let price = document.querySelector('.price')
+
+let img = document.querySelector('.img')
+
+let name = document.querySelector('.name')
+
+add.addEventListener('click', function(){
+    main.innerHTML += ` <div class="card">
+            <div class="top">
+                <img src="${img.value}" alt="">
+            </div>
+            <div class="bottom">
+                <p class="name">${name.value}</p>
+                <p class="price">UAH ${price.value}</p>
+                <p class="raiting">Raiting: 4.5/5</p>
+                <button class="buy-btn"><i class='bx bx-cart-add'></i></button>
+            </div>
+        </div>
+`
+})
 
 
 data.forEach( (e) => {
