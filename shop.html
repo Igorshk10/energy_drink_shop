@@ -23,19 +23,26 @@
         <img src="https://cdn-icons-png.flaticon.com/512/657/657104.png " class="logo" alt="">
         <hr>
         <ul>
-            <li class="item">About us</li>
-            <li class="item">Companies</li>
+            <li class="item"><a class="header-li-a" href="/index.html">Main</a></li>
+            <li class="item"><a class="header-li-a" href="/shop.html">Shop</a></li>
+            <li class="item"><a class="header-li-a" href="">About us</a></li>
+            <li class="item"><a class="header-li-a" href="">Companies</a></li>
             
         </ul>
         <a href="/cart.html" class="cart-a"><button id="cart"><i class='bx bxs-cart-alt'></i></button></a>
     </header>
-    <form action="">
-        <input type="text" name="name" placeholder="name" required class="name">
-        <input type="number" placeholder="price" required class="price">
-        <input type="text" placeholder="img-url" required class="img">
+
+    <main>
+        <button class="show-add-btn">Add product <i class='bx bx-chevrons-down'></i></button>
+            <form action="">
+        <input type="text" name="name" placeholder="name" required class="name-input">
+        <input type="number" placeholder="price" required class="price-input">
+        <input type="text" placeholder="img-url" required class="img-input">
         <button type="button" class="add">Add</button>
     </form>
-    <div class="main">
+
+
+    <div class="products">
         
         <!-- <div class="card">
             <div class="top">
@@ -52,6 +59,9 @@
         
 
     </div>
+
+    </main>
+
 
     <footer>
     <p id="slogan">No Limits. Just Energy</p>
