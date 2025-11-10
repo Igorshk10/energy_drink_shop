@@ -1,4 +1,5 @@
 body{
+    width: 100%;
     margin: 0;
     padding: 0;
 }
@@ -7,18 +8,18 @@ body{
 
 header{
     width: 100%;
-    height: 65px;
+    height: 81px;
     display: flex;
     border-bottom: 1px solid #ccc;
-    margin-bottom: 75px;
+    margin-bottom: 25px;
     box-shadow: 0 0 15px #ccc;
     align-items: center;
     padding: 8px;
     position: sticky;
     top: 0;
     background-color: white;
-    z-index: 1;
-
+    z-index: 3;
+    box-sizing: border-box;
 }
 
 #cart{
@@ -91,20 +92,95 @@ main{
     display: flex;
     padding: 20px;
     flex-direction: column;
+    box-sizing: border-box;
 }
+
+.add-form{
+    width: 300px;
+    position: absolute;
+    right: 20px;
+    top: 190px;
+    z-index: 2;
+    height: auto;
+    border-radius: 5px;
+    background-color: #ffffff; 
+    color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgb(83, 83, 83);
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.add-form.visible{
+    visibility: visible;
+    opacity: 1;
+}
+
+.add-form input{
+    width: 90%;
+    margin-bottom: 10px;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #000000;
+    background-color: #000000;
+    color: white;
+    border-radius: 5px;
+    font-family: "Gill Sans", sans-serif;
+    box-sizing: border-box;
+    transition: all 0.3s;
+}
+
+
+
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+
+.add{
+    width: 90%;
+    background-color: rgb(0, 213, 68);
+    border: none;
+    font-weight: 600;
+    font-size: 16px;
+    color: white;  
+    padding: 8px;
+    border-radius: 5px;  
+    box-sizing: border-box
+}
+
 
 .show-add-btn{
     width: 200px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(12, 205, 5);
     font-weight: 600;
     font-size: 16px;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     border-radius: 8px;
-    border: 1px solid black;
+    border: none;
     padding: 10px 0px;
     align-self: flex-end;
     margin-bottom: 20px;
+    box-shadow: 0 0 15px rgba(84, 249, 79, 0.8);
     transition: all 0.3s ;
+}
+
+.show-add-btn:hover {
+    transform: translateY(-3px) scale(1.05); 
+    box-shadow: 0 10px 20px rgba(84, 249, 79, 0.8); 
 }
 
 .products{
@@ -113,20 +189,17 @@ main{
     display: flex;
     padding: 20px;
     flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: center;
 }
 
-.filtrs{
-    height: 100%;
-    width: 20%;
-    border-right: 1px solid #ccc;
-}
 
 .card{
-    width: 240px;
+    width: 225px;
     height: 350px;
     border-radius: 10px;
-    margin-right: 40px;
-    margin-bottom: 40px;
+    margin-right: 25px;
+    margin-bottom: 30px;
     /* box-shadow: 0 0 10px rgba(0,0,0,0.1); */ 
     display: flex;
     flex-direction: column;
@@ -180,7 +253,7 @@ main{
 
 .buy-btn{
     width: 25%;
-    background-color: rgb(5, 183, 5);
+    background-color: rgb(12, 205, 5);
     font-weight: 700;
     font-size: 20px;
     color: white;
@@ -193,7 +266,7 @@ main{
 
 .buy-btn.clicked{
     background-color: rgb(208, 248, 208);
-    color: rgb(5, 183, 5);
+    color: rgb(12, 205, 5);
     pointer-events: none;
 }
 
@@ -235,8 +308,9 @@ footer{
     align-items: center;
     padding: 12px;
     font-family: "Gill Sans", sans-serif;
-    margin-top: 50px;
+    margin-top: 25px;
     box-shadow: 0 0 15px #ccc;
+    box-sizing: border-box;
 }
 
 #slogan{

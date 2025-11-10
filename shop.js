@@ -1,5 +1,7 @@
 const products = document.querySelector('.products');
 
+let show = document.querySelector('.show-add-btn')
+let form = document.querySelector('.add-form')
 let add = document.querySelector('.add')
 
 let priceI = document.querySelector('.price-input')
@@ -27,6 +29,7 @@ add.addEventListener('click', function(){
     imgI.value = ''
     nameI.value = ''
     alertify.success('Product successfully added!');
+    form.classList.remove('visible');
 })
 
 
@@ -45,7 +48,9 @@ data.forEach( (e) => {
 `
 })
 
-
+show.addEventListener('click', function(){
+    form.classList.toggle('visible');
+})
 
 products.addEventListener('click', e => {
     const btn = e.target.closest('.buy-btn');
