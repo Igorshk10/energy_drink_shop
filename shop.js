@@ -1,31 +1,40 @@
-const main = document.querySelector('.main');
+const products = document.querySelector('.products');
 
+let show = document.querySelector('.show-add-btn')
+let form = document.querySelector('.add-form')
 let add = document.querySelector('.add')
 
-let price = document.querySelector('.price')
-
-let img = document.querySelector('.img')
-
-let name = document.querySelector('.name')
+let priceI = document.querySelector('.price-input')
+let imgI = document.querySelector('.img-input')
+let nameI = document.querySelector('.name-input')
 
 add.addEventListener('click', function(){
-    main.innerHTML += ` <div class="card">
+    if(!priceI.value || !imgI.value || !nameI.value){
+        alertify.error('Please fill in all fields!');
+        return;
+    }
+    products.innerHTML += ` <div class="card">
             <div class="top">
-                <img src="${img.value}" alt="">
+                <img src="${imgI.value}" alt="">
             </div>
             <div class="bottom">
-                <p class="name">${name.value}</p>
-                <p class="price">UAH ${price.value}</p>
+                <p class="name">${nameI.value}</p>
+                <p class="price">UAH ${priceI.value}</p>
                 <p class="raiting">Raiting: 4.5/5</p>
                 <button class="buy-btn"><i class='bx bx-cart-add'></i></button>
             </div>
         </div>
 `
+    priceI.value = ''
+    imgI.value = ''
+    nameI.value = ''
+    alertify.success('Product successfully added!');
+    form.classList.remove('visible');
 })
 
 
 data.forEach( (e) => {
-    main.innerHTML += ` <div class="card">
+    products.innerHTML += ` <div class="card">
             <div class="top">
                 <img src="${e.url_img}" alt="">
             </div>
@@ -39,13 +48,14 @@ data.forEach( (e) => {
 `
 })
 
-const buttons = document.querySelectorAll('.buy-btn');
+show.addEventListener('click', function(){
+    form.classList.toggle('visible');
+})
 
-
-buttons.forEach(btn => {
-    btn.addEventListener('click', () => {
-        alertify.success('Added to cart successfully!');
-        btn.innerHTML = `<i class='bx bx-check'></i>`
-        btn.classList.add("clicked");
-    });
+products.addEventListener('click', e => {
+    const btn = e.target.closest('.buy-btn');
+    if (!btn) return; 
+    alertify.success('Added to cart successfully!');
+    btn.innerHTML = `<i class='bx bx-check'></i>`;
+    btn.classList.add("clicked");
 });

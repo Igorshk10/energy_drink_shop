@@ -116,5 +116,56 @@ let data = [
         rating: 4.9,
         url_img: 'https://bevmo.com/cdn/shop/products/64e8c30a-49ad-4ee8-9187-02c377eea1df.png?v=1698879568&width=990',
         brand: 'Monster'
+    },
+
+    // Prime Energy Drinks
+
+    {
+        name: 'Prime Energy Original',
+        price: 55, 
+        currency: 'UAH',
+        rating: 4.7,
+        url_img: 'https://bevmo.com/cdn/shop/files/9f0fd406-1f15-4602-a7fd-c47ed4c3b4fb-padded.png?v=1723096225&width=990',
+        brand: 'Prime Energy'
+    },
+    {
+        name: 'Prime Energy Lemon Lime',
+        price: 58, 
+        currency: 'UAH',
+        rating: 4.6,
+        url_img: 'https://bevmo.com/cdn/shop/files/d050e32c-48c3-443a-a035-3b5854ca20fb_842e5cff-ba50-4695-8022-d71be7aea8ca.png?v=1724305908&width=990',
+        brand: 'Prime Energy'
+    },
+    {
+        name: 'Prime Energy Ice Pop',
+        price: 60, 
+        currency: 'UAH',
+        rating: 4.9,
+        url_img: 'https://bevmo.com/cdn/shop/files/56c1077c-93a2-4955-8703-605de3c00105_2ebee8a2-2e4b-4824-9403-42c17e6ae71e.png?v=1724304507&width=990',
+        brand: 'Prime Energy'
+    },
+    {
+        name: 'Prime Energy Dream Pop',
+        price: 60, 
+        currency: 'UAH',
+        rating: 4.8,
+        url_img: 'https://bevmo.com/cdn/shop/files/27b5b410-839d-41f2-aa5c-0d9799e5246d-padded.png?v=1728386708&width=990',
+        brand: 'Prime Energy'
+    },
+    {
+        name: 'Prime Hydration LA Dodgers',
+        price: 85, 
+        currency: 'UAH',
+        rating: 4.5,
+        url_img: 'https://bevmo.com/cdn/shop/files/87b49fb0-6834-49d8-a86a-ad642f571316-background_removed.png?v=1741877580&width=990',
+        brand: 'Prime Hydration'
+    },
+    {
+        name: 'Prime Hydration LA Lakers',
+        price: 90, 
+        currency: 'UAH',
+        rating: 4.6,
+        url_img: 'https://bevmo.com/cdn/shop/files/1c1b50e9-1cbe-4a59-b652-2e9086f30db6-padded.png?v=1730786798&width=990',
+        brand: 'Prime Hydration'
     }
 ]
