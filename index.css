@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Momo+Trust+Display&display=swap');
+
 :root {
-    --main-color: rgb(0, 199, 63);
+    --main-color: rgb(3, 166, 55);
+    --main-font: "Gill Sans", sans-serif;
+    --second-font: 'Momo Trust Display', sans-serif;
 }
 
 body{
@@ -69,7 +73,7 @@ header ul{
 
 .item{
     list-style: none;
-    font-family: "Gill Sans", sans-serif;
+    font-family: var(--main-font);
     font-size: 16px;
     font-weight: 700;
     margin-right: 20px;
@@ -167,7 +171,7 @@ main{
     padding: 30px 80px;
     font-size: 25px;
     font-weight: 700;
-    font-family: "Gill Sans", sans-serif;
+    font-family: var(--main-font);
     color: yellow;
     background-color: blueviolet;
     border: none;
@@ -186,6 +190,73 @@ main{
     transform: scale(0.90);
 }
 
+.our_partners{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #134d21;
+}
+
+#partner_p{
+    margin-left: 30px;
+    font-family: var(--second-font);
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 10px;
+    color: white;
+    text-transform: uppercase;
+}
+
+
+.partners_1{
+    padding: 15px 40px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #134d21;
+}
+
+.partners_2{
+    padding: 15px 40px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #165a27;
+}
+
+.partners_3{
+    padding: 15px 40px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #1c7031;
+}
+
+.partner{
+    width: 60px;
+    height: 35px;
+    padding: 6px;
+    border-radius: 4px;
+    margin-left: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+.partner:hover{
+    background-color: #ffffff25;
+}
+
+
+.partner img{
+    width: 100%; 
+    height: 100%;
+    object-fit: contain;
+}
+
 /* стилі для футера */
 
 footer {
@@ -196,7 +267,7 @@ footer {
     justify-content: center;
     align-items: center;
     padding: 25px;
-    font-family: "Gill Sans", sans-serif;
+    font-family: var(--main-font);
     margin-top: 25px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
     box-sizing: border-box;
@@ -211,6 +282,7 @@ footer {
     margin: 5px 0 15px 0;
     color: var(--main-color);
     text-transform: uppercase;
+    margin-bottom: 15px;
 }
 
 footer p {
@@ -219,7 +291,7 @@ footer p {
 
 .energy-footer {
     display: flex;
-    width: 35%;
+    width: 65%;
     align-items: center;
     justify-content: space-around;
 }
