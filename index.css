@@ -2,6 +2,7 @@
 
 :root {
     --main-color: rgb(3, 166, 55);
+    --second-color: #00ff80;
     --main-font: "Gill Sans", sans-serif;
     --second-font: 'Momo Trust Display', sans-serif;
 }
@@ -95,63 +96,10 @@ header ul{
     text-decoration: none;
     color: black;
 }
-/* стилі для каруселі */
-
-  
-    .carusel-counteiner {
-    width: 100%;
-    overflow: hidden;
-    border: 1px solid black;
-    margin-top: 150px;
-}
-
-.card1{
-    flex: 0 0 auto;
-    width: 200px;
-    height: 200px;
-    background-color: rgb(248, 248, 248);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-}
-
-.card2{
-    flex: 0 0 auto;
-    width: 200px;
-    height: 200px;
-    background-color: rgb(212, 212, 212);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-}
-
-.carusel-track {
-    display: flex;
-    width: max-content;
-    animation: scroll-left 22s linear infinite;
-}
-
-@keyframes scroll-left {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
-}
-
-.card1 img, .card2 img {
-    width: 100px;
-}
 
 /* стилі для мейн */
 main{
     width: 100%;
-    height: 100vh;
 }
 
 .start{
@@ -167,35 +115,34 @@ main{
     text-decoration: none;
 }
 
-.start-btn{
-    padding: 30px 80px;
-    font-size: 25px;
-    font-weight: 700;
-    font-family: var(--main-font);
-    color: yellow;
-    background-color: blueviolet;
+.start-btn {
+    padding: 14px 56px;
+    background: #0b0b0b;
+    color: var(--second-color);
     border: none;
-    border-radius: 7px;
-    transition: all 0.6s;
-
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.3s ease;
+    font-family: var(--second-font);
 }
 
-.start-btn:hover{
-    background-color: brown;
-    color: black;
+.start-btn:hover {
+    background: var(--second-color);
+    color: #0b0b0b;
+    box-shadow: 0 0 20px rgba(0,255,128,0.8);
     transform: scale(1.05);
 }
 
-.start-btn:active{
-    transform: scale(0.90);
-}
-
 .our_partners{
+    margin: 100px 0;
     display: flex;
     flex-direction: column;
     width: 100%;
     box-sizing: border-box;
-    background-color: #134d21;
+    background-color: #0b0b0b;
 }
 
 #partner_p{
@@ -214,7 +161,7 @@ main{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    background-color: #134d21;
+    /* background-color: #134d21; */
 }
 
 .partners_2{
@@ -222,7 +169,7 @@ main{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    background-color: #165a27;
+    background-color: #1d1d1d;
 }
 
 .partners_3{
@@ -230,24 +177,24 @@ main{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    background-color: #1c7031;
+    background-color: #2a2a2a;
 }
 
 .partner{
-    width: 60px;
-    height: 35px;
+    width: 65px;
+    height: 38px;
     padding: 6px;
     border-radius: 4px;
     margin-left: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
     transition: all 0.3s;
 }
 
-.partner:hover{
-    background-color: #ffffff25;
+.partner:hover img{
+    filter: drop-shadow(0 0 13px var(--second-color));
+    transform: scale(1.1);
 }
 
 
@@ -255,6 +202,7 @@ main{
     width: 100%; 
     height: 100%;
     object-fit: contain;
+    transition: all 0.3s;
 }
 
 /* стилі для футера */

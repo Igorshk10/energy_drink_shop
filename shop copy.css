@@ -1,6 +1,5 @@
 :root {
     --main-color: rgb(3, 166, 55);
-    --buy-color: #27d200;
     --main-font: "Gill Sans", sans-serif;
     --second-font: 'Momo Trust Display', sans-serif;
 }
@@ -156,11 +155,14 @@ input[type=number]::-webkit-outer-spin-button {
     margin: 0;
 }
 
+input[type=number] {
+    -moz-appearance: textfield;
+}
 
 
 .add{
     width: 90%;
-    background-color: var(--buy-color);
+    background-color: var(--main-color);
     border: none;
     font-weight: 600;
     font-size: 16px;
@@ -173,7 +175,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .show-add-btn{
     width: 200px;
-    background-color:var(--buy-color);
+    background-color:var(--main-color);
     font-weight: 600;
     font-size: 16px;
     color: rgb(255, 255, 255);
@@ -261,7 +263,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .buy-btn{
     width: 25%;
-    background-color:var(--buy-color);
+    background-color:var(--main-color);
     font-weight: 700;
     font-size: 20px;
     color: white;
@@ -274,7 +276,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .buy-btn.clicked{
     background-color: rgb(208, 248, 208);
-    color: var(--second-color);
+    color: var(--main-color);
     pointer-events: none;
 }
 
