@@ -1,12 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Energy</title>
-    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/657/657104.png">
+  <title>Energy</title>
+  <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/657/657104.png">
+  <link rel="stylesheet" href="/cart.css">
+  <script src="/cart.js" defer></script>
 </head>
+
 <body>
-  gfgfg
+  <header>
+    <img src="https://cdn-icons-png.flaticon.com/512/657/657104.png " class="logo" alt="">
+    <hr>
+    <ul>
+      <li class="item"><a class="header-li-a" href="/index.html">Main</a></li>
+      <li class="item"><a class="header-li-a" href="/shop.html">Shop</a></li>
+      <li class="item"><a class="header-li-a" href="">About us</a></li>
+      <li class="item"><a class="header-li-a" href="">Companies</a></li>
+
+    </ul>
+    <a href="/cart.html" class="cart-a"><button id="cart"><i class='bx bxs-cart-alt'></i></button></a>
+  </header>
+
+  <main>
+    <div class="main-cart">
+      <div class="left-cart">
+        <div class="cart-item">
+          <img
+            src="https://bevmo.com/cdn/shop/files/eecc9dcb-024d-4f99-a586-5a744abec31f-background_removed.png?v=1738037375&width=990"
+            alt="">
+          <div class="information">
+            <p class="cart-name">red bull</p>
+            <button class="delete">delete</button>
+          </div>
+          <div class="cart-price">
+            <p>UAH 79</p>
+            <div class="counter">
+              <button class="btn minus">−</button>
+              <span class="count">1</span>
+              <button class="btn plus">+</button>
+            </div>
+
+          </div>
+        </div>
+        
+      </div>
+      <div class="right-cart">
+        <div class="order">
+          <p>total amount: UAH 79</p>
+          <button class="confirm">confirm</button>
+
+        </div>
+
+      </div>
+    </div>
+  </main>
 </body>
+
 </html>
