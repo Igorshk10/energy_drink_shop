@@ -107,24 +107,24 @@ main{
 }
 
 .left-cart{
-  width: 65% ;
+  width: 50% ;
   display: flex;
 flex-direction: column;
-align-items: center;
+align-items: end;
 }
 
 .cart-item{
-  width: 90%;
+  width: 65%;
   padding: 20px;
-  margin: 40px;
+  margin: 10px;
   box-sizing: border-box;
   display: flex;
-  height: 210px;
-  border:none;
+  height: 190px;
+  border: 1px solid #ccc;
   align-items: center;
   font-family: var(--main-font);
   box-shadow: 0 0 10px #ccc;
-  border-radius: 5px;
+  border-radius: 8px;
 }
 
 .cart-item img{
@@ -142,29 +142,32 @@ align-items: center;
   
 }
 
-.delete{
-  padding: 5px 13px;
-  background-color: black;
-  color: white;
-  border: none;
-  font-size: 14px;
-  transition: all 0.3s;
-  border-radius: 5px;
+.delete {
+  margin-top: 10px;
+  background: transparent;
+  border: 2px solid #000;
+  padding: 5px 12px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.2s;
+  font-size: 15px;
+  font-weight: 700;
 }
 
-.delete:hover{
-  background-color: #45e73c;
-  color: black;
-  transform: scale(1.05);
+.delete:hover {
+  background: var(--second-color);
+  border: 2px solid var(--second-color);
+  color: #000000;
 }
 
 .cart-price{
-    font-size: 20px;
+  font-size: 20px;
   height: 100%;
-   margin: 10px;
+  margin: 10px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  margin-left: auto;
 }
 .counter {
     display: inline-flex;
@@ -191,7 +194,7 @@ align-items: center;
 }
 
 .counter .plus {
-    background: rgb(94, 222, 77);
+    background: var(--second-color);
     color: rgb(0, 0, 0);
 }
 
@@ -200,42 +203,62 @@ align-items: center;
     text-align: center;
     font-size: 18px;
     font-weight: 500;
-    border-left: 1px solid #ddd;
-    border-right: 1px solid #ddd;
 }
 
 .right-cart{
-  width: 35%;
+  width: 50%;
   display: flex;
-flex-direction: column;
+  flex-direction: column;
+  align-items: start;
 }
 
 .order{
-  width: 90%;
-  margin: 40px;
+  width: 70%;
+  margin: 10px;
   padding: 20px;
   box-sizing: border-box;
   box-shadow: 0 0 10px #ccc;
-  border-radius: 5px;
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
+  font-size: 17px;
+  font-weight: 600;
   font-family: var(--main-font);
+  border: 1px solid #ccc;
+}
+
+.order-list{
+  font-size: 15px;
+  font-weight: 300;
+  margin-bottom: 25px;
+}
+
+.order-list li{
+  margin-bottom: 5px;
+  padding: 0;
+}
+
+.order-list li p{
+  margin: 0;
+  padding: 0;
 }
 
 .confirm{
-    padding: 5px 13px;
-  background-color: black;
-  color: white;
-  border: none;
+    padding: 6px 11px;
+    background-color: white;
+  color: rgb(0, 0, 0);
+  border: 2px solid rgb(0, 0, 0);
   font-size: 14px;
   transition: all 0.3s;
-  width: 90%;
+  width: 80%;
   align-self: center;
   border-radius: 5px;
+   font-size: 15px;
+  font-weight: 700;
 }
 
 .confirm:hover{
-  background-color: #45e73c;
+  background-color: var(--second-color);
   color: black;
-  transform: scale(1.05);
+  border: 2px solid var(--second-color);
 }
