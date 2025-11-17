@@ -15,7 +15,7 @@ add.addEventListener('click', function(){
     }
     products.innerHTML += ` <div class="card">
             <div class="top">
-                <img src="${imgI.value}" alt="">
+                <img class="product-img" src="${imgI.value}" alt="">
             </div>
             <div class="bottom">
                 <p class="name">${nameI.value}</p>
