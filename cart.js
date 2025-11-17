@@ -1,3 +1,6 @@
+let cart = JSON.parse(sessionStorage.getItem('cart')) || [];
+console.log(cart);
+
 const minusBtn = document.querySelector(".minus");
 const plusBtn = document.querySelector(".plus");
 const countEl = document.querySelector(".count");
