@@ -15,7 +15,7 @@ add.addEventListener('click', function(){
     }
     products.innerHTML += ` <div class="card">
             <div class="top">
-                <img src="${imgI.value}" alt="">
+                <img class="product-img" src="${imgI.value}" alt="">
             </div>
             <div class="bottom">
                 <p class="name">${nameI.value}</p>
@@ -34,9 +34,25 @@ add.addEventListener('click', function(){
 
 
 data.forEach( (e) => {
+    let cart = JSON.parse(sessionStorage.getItem('cart')) || [];
+
+    if(cart.find(item => item.title === e.name)){
+            products.innerHTML += ` <div class="card">
+            <div class="top">
+                <img class="product-img" src="${e.url_img}" alt="">
+            </div>
+            <div class="bottom">
+                <p class="name">${e.name}</p>
+                <p class="price">${e.currency} ${e.price}</p>
+                <p class="raiting">Raiting: ${e.rating}/5</p>
+                <button class="buy-btn clicked"><i class='bx bx-check'></i></button>
+            </div>
+        </div>
+`
+    } else {
     products.innerHTML += ` <div class="card">
             <div class="top">
-                <img src="${e.url_img}" alt="">
+                <img class="product-img" src="${e.url_img}" alt="">
             </div>
             <div class="bottom">
                 <p class="name">${e.name}</p>
@@ -46,6 +62,9 @@ data.forEach( (e) => {
             </div>
         </div>
 `
+    }
+
+
 })
 
 show.addEventListener('click', function(){
@@ -58,4 +77,22 @@ products.addEventListener('click', e => {
     alertify.success('Added to cart successfully!');
     btn.innerHTML = `<i class='bx bx-check'></i>`;
     btn.classList.add("clicked");
+
+    const product = btn.closest('.card');
+
+    const titleProduct = product.querySelector('.name').textContent;
+    const priceProduct = product.querySelector('.price').textContent;
+    const imgProduct = product.querySelector('.product-img');
+    const imgUrlProduct = imgProduct.getAttribute('src');
+
+
+    let cart = JSON.parse(sessionStorage.getItem('cart')) || [];
+
+    cart.push({
+        title: titleProduct,
+        price: priceProduct,
+        imgUrl: imgUrlProduct
+    });
+
+    sessionStorage.setItem('cart', JSON.stringify(cart));
 });
