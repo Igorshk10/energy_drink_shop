@@ -43,7 +43,7 @@ let data = [
         brand: 'Red Bull'
     },
     {
-        name: 'Оригінальний Red Bull 4x',
+        name: 'Red Bull Classic 4x',
         price: 260,
         currency: 'UAH',
         rating: 4.8,

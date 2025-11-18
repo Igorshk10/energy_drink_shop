@@ -8,7 +8,7 @@ cart.forEach((item) => {
     leftCart.innerHTML += `<div id="${item.id}" class="cart-item">
         <div class="img-cart">
             <img src="${item.imgUrl}" alt="">
-          </div>
+        </div>
         <div class="information">
             <p class="cart-name">${item.title}</p>
             <button type="submit" class="delete">delete</button>
@@ -66,5 +66,18 @@ leftCart.addEventListener('click', e => {
 })
 
 
+// подальший код потрібен для оформлення замовлень 
 
+
+const confirm = document.querySelector('.confirm')
+const orderWindow = document.querySelector('.order-window')
+const closeBtn = document.querySelector('.close')
+
+confirm.addEventListener('click', e => {
+    orderWindow.classList.add('visible')
+})
+
+closeBtn.addEventListener('click', e => {
+    orderWindow.classList.remove('visible')
+})
 
