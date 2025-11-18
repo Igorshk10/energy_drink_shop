@@ -11,7 +11,7 @@ cart.forEach((item) => {
           </div>
         <div class="information">
             <p class="cart-name">${item.title}</p>
-            <button class="delete">delete</button>
+            <button type="submit" class="delete">delete</button>
         </div>
         <div class="cart-price">
             <p>${item.price}</p>
@@ -62,6 +62,7 @@ leftCart.addEventListener('click', e => {
     sessionStorage.setItem('cart', JSON.stringify(cart));
 
     cartItem.remove();
+    location.reload();
 })
 
 
