@@ -2,10 +2,13 @@ let cart = JSON.parse(sessionStorage.getItem('cart')) || [];
 console.log(cart);
 
 const leftCart = document.querySelector(".left-cart");
+const order = document.querySelector(".order-list");
 
 cart.forEach((item) => { 
-    leftCart.innerHTML += `<div class="cart-item">
-        <img src="${item.imgUrl}" alt="">
+    leftCart.innerHTML += `<div id="${item.id}" class="cart-item">
+        <div class="img-cart">
+            <img src="${item.imgUrl}" alt="">
+          </div>
         <div class="information">
             <p class="cart-name">${item.title}</p>
             <button class="delete">delete</button>
@@ -20,6 +23,7 @@ cart.forEach((item) => {
 
         </div>
         </div>`
+    order.innerHTML += `<li>${item.title}</li>`;
 })
 
 
@@ -44,6 +48,22 @@ leftCart.addEventListener('click', e => {
         }
     }
 });
+
+
+leftCart.addEventListener('click', e => { 
+    const deleteBtn = e.target.closest('.delete');
+    const cartItem = deleteBtn.closest('.cart-item');
+
+    if (!deleteBtn) return;
+    const id = cartItem.getAttribute('id');
+
+    let cart = JSON.parse(sessionStorage.getItem('cart')) || [];
+    cart = cart.filter(item => item.id !== id);
+    sessionStorage.setItem('cart', JSON.stringify(cart));
+
+    cartItem.remove();
+})
+
 
 
 
