@@ -88,7 +88,12 @@ products.addEventListener('click', e => {
 
     let cart = JSON.parse(sessionStorage.getItem('cart')) || [];
 
+    function generateId() {
+    return crypto.randomUUID();
+    }
+
     cart.push({
+        id: generateId(),
         title: titleProduct,
         price: priceProduct,
         imgUrl: imgUrlProduct
