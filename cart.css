@@ -356,3 +356,25 @@ align-items: end;
   color: black;
   border: 2px solid var(--second-color);
 }
+
+
+.ajs-message.ajs-success.ajs-visible{
+    background: #25e68c;
+    background: linear-gradient(90deg, rgba(37, 230, 140, 1) 31%, rgba(93, 232, 209, 1) 97%);
+    font-size: 16px;
+    font-weight: 600;
+    font-family:  var(--main-font);
+    text-shadow: none;
+    border-radius: 3px;
+}
+
+
+.ajs-message.ajs-error.ajs-visible{
+    background: #e62525;
+    background: linear-gradient(90deg, rgb(230, 37, 37) 31%, rgb(232, 93, 93) 97%);
+    font-size: 16px;
+    font-weight: 600;
+    font-family: var(--main-font);
+    text-shadow: none;
+    border-radius: 3px;
+}
